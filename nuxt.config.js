@@ -90,6 +90,7 @@ export default {
 
   // Generate static web pages
   generate: {
+    dir: 'public',
     routes: dynamicRoutes
   },
 
