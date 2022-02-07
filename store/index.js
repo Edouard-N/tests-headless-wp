@@ -25,7 +25,7 @@ export const actions = {
   }) {
     if (state.posts.length) return
     try {
-      let posts = await fetch(`https://old.ndml.fr/wp-json/wp/v2/posts?page=1&per_page=20&_embed=1`).then(res => res.json())
+      let posts = await fetch(`https://www.foyer-charite-courset.fr/wp-json/wp/v2/posts?page=1&per_page=20&_embed=1`).then(res => res.json())
       posts = posts
         .filter(el => el.status === "publish")
         .map(({
@@ -63,7 +63,7 @@ export const actions = {
     console.log(allTags)
     try {
       let tags = await fetch(
-        `https://old.ndml.fr/wp-json/wp/v2/tags?page=1&per_page=40&include=${allTags}`
+        `https://www.foyer-charite-courset.fr/wp-json/wp/v2/tags?page=1&per_page=40&include=${allTags}`
       ).then(res => res.json())
       tags = tags.map(({
         id,
